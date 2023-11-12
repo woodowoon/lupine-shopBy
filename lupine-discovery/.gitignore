@@ -34,6 +34,3 @@ out/
 
 ### VS Code ###
 .vscode/
-/lupine-discovery/src/main/resources/application.yml
-/src/main/resources/application.yml
-**/application.yml
