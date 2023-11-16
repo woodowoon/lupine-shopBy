@@ -1,2 +1,2 @@
 rootProject.name = 'lupine-shopBy'
-include("lupine-discovery")
+include 'lupine-discovery'
