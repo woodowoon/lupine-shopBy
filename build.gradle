@@ -84,17 +84,19 @@ subprojects {
 }
 
 project(':lupine-discovery') {
-}
-
-project(':lupine-discovery') {
     dependencies {
         implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
     }
 }
 
-//project(':lupine-display') {
-//}
-//
+project(':lupine-display') {
+    dependencies {
+        implementation project(':lupine-common')
+
+        implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    }
+}
+
 //project(':lupine-manage') {
 //}
 //
