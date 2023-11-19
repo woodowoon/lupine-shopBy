@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: lupine-svr-discovery
+  config:
+    location: currentdir/config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS

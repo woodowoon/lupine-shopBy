@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: local
+
+server:
+  port: 22030
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    preferIpAddress: true
+  client:
+    registerWithEureka: false  # Eureka 서버가 자신을 Eureka에 등록하지 않도록 설정
+    fetchRegistry: false       # Eureka 서버가 다른 Eureka 서버로부터 레지스트리 정보를 가져오지 않도록 설정
+    serviceUrl:
+      defaultZone: http://localhost:22030/eureka/
+      enabled: true
+  server:
+    enableSelfPreservation: false  # 네트워크 파티션 문제 시 서비스 제거를 방지하는 자체 보존 모드 비활성화
+    evictionIntervalTimerInMs: 10000  # 서비스 인스턴스가 응답하지 않을 때 제거되기까지의 시간 (밀리초)
